@@ -1,0 +1,7 @@
+.travis.yml
+.idea
+.vscode
+node_modules
+dist
+*.log
+yarn.lock

@@ -1,0 +1,32 @@
+body {
+    padding: 12px;
+}
+
+.input-section {
+    background-color: aliceblue;
+}
+
+.post-list {
+    padding-bottom: 10px;
+}
+
+.appName {
+  color: green;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.userLabel {
+    display: block;
+    margin-top: 10px;
+}
+
+.userInput {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.postsHeader {
+    margin: 12px;
+    padding: 10px;
+}
