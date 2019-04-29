@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "start": "npm run build && nodemon src/server",
-    "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
+    "client": "webpack-dev-server --mode development --devtool cheap-eval-source-map --hot",
     "server": "nodemon src/server",
     "test": "jest",
     "clean": "rm -rf node_modules dist",

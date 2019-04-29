@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './app.css';
-import Counter from './Counter';
+import Counter, { CounterDisplay } from './Counter';
+import { CountProvider, useCount } from './context/count';
 
 export default class App extends Component {
   state = {
@@ -8,7 +9,8 @@ export default class App extends Component {
     posts: null,
     currentPost: null,
     showSpinner: false,
-    showError: false
+    showError: false,
+    count: { count: 3 }
   };
 
   componentDidMount() {
@@ -60,12 +62,12 @@ export default class App extends Component {
               <label htmlFor="subredditInput" className="userLabel">Enter a subreddit name</label>
               <input type="text" id="subreddit" name="subredditInput" className="userInput" />
               <button type="submit" form="subNameForm" className="userInput">Submit</button>
+              { showError && <div className="alert alert-danger" role="alert">Error loading data</div> }
             </form>
 
             <section id="posts" className="border-top post-list">
               <h3 className="postsHeader">{!showSpinner && name} Posts</h3>
               { showSpinner && <div className="text-center"><span className="spinner-border text-primary" /></div> }
-              { showError && <div className="alert alert-danger" role="alert">Error loading data</div> }
               { !showSpinner &&
                 <ul className="posts">
                   { posts
@@ -75,6 +77,16 @@ export default class App extends Component {
                   }}>{post.title}</a></li>)}
                 </ul>
               }
+
+              {/*<CountProvider>*/}
+                {/*<CounterDisplay />*/}
+                {/*<abbr className="alert alert-warning small">Count state is NOT shared between different CountProvider.</abbr>*/}
+              {/*</CountProvider>*/}
+
+              {/*<CountProvider>*/}
+                {/*Another CountProvider <CounterDisplay />*/}
+              {/*</CountProvider>*/}
+
             </section>
           </section>
 

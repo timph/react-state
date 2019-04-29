@@ -10,6 +10,10 @@ body {
     padding-bottom: 10px;
 }
 
+button {
+    margin-right: 10px;
+}
+
 .appName {
   color: green;
   text-align: center;
