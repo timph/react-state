@@ -1,19 +1,17 @@
 
 ## Introduction
 
-	*	    Provide a UI that allows a user to enter a subreddit (i.e. reactjs - https://www.reddit.com/r/reactjs.json)
-	*	    When the UI receives the subreddit, display the most recent posts
-	*	    The UI should only show 10 posts at a time with the ability to move forward/backward through the list of posts
+* Provide a UI that allows a user to enter a subreddit (i.e. reactjs - https://www.reddit.com/r/reactjs.json)
+* When the UI receives the subreddit, display the most recent posts
+* The UI should only show 10 posts at a time with the ability to move forward/backward through the list of posts
 
 ## Quick Start
 
-npm install
-npm run build
-npm start
+```npm install && npm run build && npm start```
 
 # Test
 
-npm run test
+```npm run test```
 
 ## Documentation
 
